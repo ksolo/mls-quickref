@@ -1,0 +1,27 @@
+{
+  "name": "MLS Quick Reference",
+  "version": "1.0",
+  "description": "Used to look up address and estimate monthly payments for MLS properties",
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.mredllc.com/*"],
+      "js": ["mls/index.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_security_policy": "script-src 'self' https://maps.googleapis.com; object-src 'self'",
+  "permissions": ["declarativeContent", "storage"],
+
+  "manifest_version": 2
+}
