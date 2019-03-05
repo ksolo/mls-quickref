@@ -1,7 +1,8 @@
 {
   "name": "MLS Quick Reference",
-  "version": "1.0",
   "description": "Used to look up address and estimate monthly payments for MLS properties",
+  "manifest_version": 2,
+  "version": "0.1.0",
 
   "background": {
     "scripts": ["background.js"],
@@ -22,7 +23,5 @@
   },
 
   "content_security_policy": "script-src 'self' https://maps.googleapis.com; object-src 'self'",
-  "permissions": ["declarativeContent", "storage"],
-
-  "manifest_version": 2
+  "permissions": ["declarativeContent", "storage"]
 }
