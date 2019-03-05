@@ -13,11 +13,11 @@
   }
 
   function initMap() {
-    chrome.storage.local.get("location", function(data) {
+    chrome.storage.local.get(["listing"], function(data) {
       if (!data) return;
 
       const geocoder = new google.maps.Geocoder();
-      geocoder.geocode({address: data.location.address}, function(results, success) {
+      geocoder.geocode({address: data.listing.address}, function(results, success) {
         if (success === "OK") {
           const position = results[0].geometry.location;
           const map = createMap(position);

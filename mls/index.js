@@ -23,5 +23,5 @@
 
   let listing = { address, price }
 
-  chrome.storage.local.set({"listing": listing});
+  chrome.storage.local.set({listing});
 })();
