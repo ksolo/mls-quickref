@@ -2,7 +2,7 @@
 const mlsRule = {
   conditions: [
     new chrome.declarativeContent.PageStateMatcher({
-      pageUrl: { pathEquals: "/gateway/postings/postings.jsp", queryContains: "ps-report" }
+      pageUrl: { queryContains: "ps-report=detail", pathEquals: "/gateway/postings/postings.jsp" }
     })
   ],
   actions: [ new chrome.declarativeContent.ShowPageAction() ]
