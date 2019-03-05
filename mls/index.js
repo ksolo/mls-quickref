@@ -1,17 +1,14 @@
 (function() {
-  let address = setAddress();
-  let price = setPrice();
-
-  function setAddress() {
+  function getAddress() {
     const addressNode = document.getElementsByClassName("pl-head-address")[0];
 
     if (addressNode) {
       return addressNode.textContent.replace(/[\s*]/g,' ').trim();
     }
-    return "";
+    return "Chicago, IL";
   }
 
-  function setPrice() {
+  function getPrice() {
     const priceRegexp = /[\$,]/g
     const priceNode = document.getElementsByClassName("rc-price")[0];
 
@@ -21,7 +18,10 @@
     return 0;
   }
 
-  let listing = { address, price }
+  const listing = {
+    address: getAddress(),
+    price: getPrice()
+  }
 
   chrome.storage.local.set({listing});
 })();
