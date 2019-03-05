@@ -3,13 +3,13 @@
   const zoom = 15;
 
   function createMap(center) {
-    const map = new google.maps.Map(document.getElementById("map"), {
+    return new google.maps.Map(document.getElementById("map"), {
       center, zoom
     });
   }
 
   function setMarker(map, position) {
-    new google.maps.Marker({ map, position });
+    new google.maps.Marker({map, position});
   }
 
   function initMap() {

@@ -17,7 +17,8 @@
   ],
 
   "page_action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "MLS Supplements"
   },
 
   "content_security_policy": "script-src 'self' https://maps.googleapis.com; object-src 'self'",
