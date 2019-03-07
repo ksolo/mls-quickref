@@ -63,7 +63,5 @@
     taxes: getTaxes()
   }
 
-  console.log(listing);
-
   chrome.storage.local.set({listing});
 })();
