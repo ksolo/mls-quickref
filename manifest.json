@@ -2,7 +2,7 @@
   "name": "MLS Quick Reference",
   "description": "Used to look up address and estimate monthly payments for MLS properties",
   "manifest_version": 2,
-  "version": "0.1.0",
+  "version": "0.2.0",
 
   "background": {
     "scripts": ["background.js"],
