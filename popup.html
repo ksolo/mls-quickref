@@ -5,10 +5,16 @@
       header h1 {
         border-bottom: 1px solid lightgray;
       }
-
       #map {
         height: 300px;
         width: 500px;
+      }
+      .monthly-payments {
+        font-size: 1.2em;
+      }
+      .line-items {
+        display: flex;
+        justify-content: space-between;
       }
     </style>
   </head>
@@ -24,7 +30,7 @@
         <h1>Estimates</h1>
       </header>
       <div class="monthly-payments">
-        <div id="principle" class="line-items">
+        <div id="payment" class="line-items">
           <div class="key">Principle and Interest</div>
           <div class="value"></div>
         </div>
@@ -34,6 +40,10 @@
         </div>
         <div id="taxes" class="line-items">
           <div class="key">Taxes</div>
+          <div class="value"></div>
+        </div>
+        <div id="insurance" class="line-items">
+          <div class="key">Insurance</div>
           <div class="value"></div>
         </div>
         <div id="total" class="line-items">
@@ -47,7 +57,7 @@
     <!-- Load Google Map script -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWPI5u-0PCJdJigHMTqZxPkCh827XGSIM&callback=initMap"></script>
     <!-- Estimatens -->
-    <script src="eeimates/payment.js"></script>
-    <script src="estimates/payment.js"></script>
+    <script src="estimates/calculations.js"></script>
+    <script src="estimates/index.js"></script>
   </body>
 </html>
