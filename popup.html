@@ -16,6 +16,12 @@
         display: flex;
         justify-content: space-between;
       }
+      .line-items:last-child .key {
+        font-weight: bold;
+      }
+      .value:before {
+        content: "$";
+      }
     </style>
   </head>
   <body>
@@ -46,6 +52,7 @@
           <div class="key">Insurance</div>
           <div class="value"></div>
         </div>
+        <hr />
         <div id="total" class="line-items">
           <div class="key">Total</div>
           <div class="value"></div>
